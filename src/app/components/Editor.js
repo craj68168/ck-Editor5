@@ -1,14 +1,14 @@
-import { Editor as ClassicEditor } from "ckeditor5-custom-build/build/ckeditor";
+import Editor from "ckeditor5-custom-build/build/ckeditor";
 import { CKEditor } from "@ckeditor/ckeditor5-react";
 import React from "react";
 import styled from "styled-components";
 const Wrapper = styled.div``;
 
-const Editor = () => {
+const MyEditor = () => {
   return (
     <Wrapper>
       <CKEditor
-        editor={ClassicEditor}
+        editor={Editor}
         data="<p>Hello from ckeditor5</p>"
         onChange={(event, editor) => {
           const data = editor.getData();
@@ -28,4 +28,4 @@ const Editor = () => {
   );
 };
 
-export default Editor;
+export default MyEditor;
